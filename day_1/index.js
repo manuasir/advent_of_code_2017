@@ -4,14 +4,27 @@
 // 1234 produces 0 because no digit matches the next.
 // 91212129 produces 9 because the only digit that matches the next one is the last digit, 9.
 
-let input = '1122'
+let input = '91212129'
 
 /**
  * Calculates the sum of the duplicated elements
  * @param str
  */
 const resolveCaptcha = (str) => {
-  return str.length
+  let duplicates = []
+  let flagValue = str[0]
+  for (let i=1;i<str.length;i++) {
+    if (str[i] === flagValue) {
+      duplicates.push(Number(str[i]))
+    } else {
+      flagValue = str[i]
+    }
+    if (i === str.length-1 ) {
+      if(str[0] === str[i])
+        duplicates.push(Number(str[i]))
+    }
+  }
+  return duplicates.reduce((a, b) => { return a + b },0)
 }
 
 console.log(resolveCaptcha(input))
