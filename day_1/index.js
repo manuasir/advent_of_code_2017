@@ -13,18 +13,17 @@ let input = '5228833336355848549915459366737982598312959583817455621545976784792
 const resolveCaptcha = (str) => {
   let duplicates = []
   let flagValue = str[0]
-  for (let i=1;i<str.length;i++) {
+  for (let i = 1; i < str.length; i++) {
     if (str[i] === flagValue) {
       duplicates.push(Number(str[i]))
     } else {
       flagValue = str[i]
     }
-    if (i === str.length-1 ) {
-      if(str[0] === str[i])
-        duplicates.push(Number(str[i]))
+    if (i === str.length - 1) {
+      if (str[0] === str[i]) { duplicates.push(Number(str[i])) }
     }
   }
-  return duplicates.reduce((a, b) => { return a + b },0)
+  return duplicates.reduce((a, b) => { return a + b }, 0)
 }
 
 console.log(resolveCaptcha(input))
