@@ -15,7 +15,6 @@ describe('Testing day 2', () => {
     done()
   })
   it('second challenge', (done) => {
-    require('../day_2/index').getEvenlyDivisibleValues(require('../day_2/input').inputTest).should.be.equal(18)
     require('../day_2/index').getEvenlyDivisibleValues(require('../day_2/input').input).should.be.equal(258)
     done()
   })
