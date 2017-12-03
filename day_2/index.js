@@ -1,4 +1,4 @@
-//
+
 let input = '179\t2358\t5197\t867\t163\t4418\t3135\t5049\t187\t166\t4682\t5080\t5541\t172\t4294\t1397\n' +
   '2637\t136\t3222\t591\t2593\t1982\t4506\t195\t4396\t3741\t2373\t157\t4533\t3864\t4159\t142\n' +
   '1049\t1163\t1128\t193\t1008\t142\t169\t168\t165\t310\t1054\t104\t1100\t761\t406\t173\n' +
@@ -20,11 +20,6 @@ let input = '179\t2358\t5197\t867\t163\t4418\t3135\t5049\t187\t166\t4682\t5080\t
 // 5 1 9 5
 // 7 5 3
 // 2 4 6 8 -> this result must be 18
-
-// let input = '5\t1\t9\t5\n' +
-//   '7\t5\t3\n' +
-//   '2\t4\t6\t8\n'
-//
 
 /**
  * Calculates the max number in an array
@@ -56,6 +51,11 @@ const min = (arr) => {
   return aux
 }
 
+/**
+ * Calculates the checksum of a matrix
+ * @param input
+ * @return {*}
+ */
 const checkSum = (input) => {
   let sum = []
   let file = []
@@ -76,4 +76,50 @@ const checkSum = (input) => {
   return sum.reduce((a,b) => { return a+b },0)
 }
 
-console.log(checkSum(input))
+/**
+ * Obtains the result of the two evenly divisible values in an array
+ * @param arr
+ */
+const checkDivisibleValues = (arr) => {
+  for (let i=0;i<arr.length;i++) {
+    for (let j=0;j<arr.length;j++) {
+      if (i !== j) {
+        if (arr[i] % arr[j] === 0) {
+          return arr[i] / arr[j]
+        }
+        else if (arr[j]%arr[i] === 0) {
+          return arr[j] / arr[i]
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Obtains the sum of the all results of the two evenly divisible values
+ * @param input
+ * @return {Number}
+ */
+const getEvenlyDivisibleValues = (input) => {
+  let sum = []
+  let file = []
+  let num = ''
+  console.log(input)
+  for (let i=0;i<input.length;i++) {
+    if (input[i] === '\t' || input[i] === '\n') {
+      file.push(Number(num))
+      num = ''
+    } else {
+      num+=String(input[i])
+    }
+    // process each line here
+    if (input[i] === '\n') {
+      sum.push(checkDivisibleValues(file))
+      file = []
+    }
+  }
+  return sum.reduce((a,b) => { return a+b },0)
+}
+
+// Show the result
+console.log(getEvenlyDivisibleValues(input))
