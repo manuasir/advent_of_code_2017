@@ -1,4 +1,8 @@
-
+/**
+ * Returns how many steps there are from n to the root
+ * @param n
+ * @return {number}
+ */
 exports.howManySteps = (n) => {
   const root = Math.ceil(Math.sqrt(n));
   const curR = root % 2 !== 0 ? root : root + 1;
