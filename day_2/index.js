@@ -121,5 +121,3 @@ const getEvenlyDivisibleValues = (input) => {
   return sum.reduce((a,b) => { return a+b },0)
 }
 
-// Show the result
-console.log(getEvenlyDivisibleValues(input))

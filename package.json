@@ -1,0 +1,31 @@
+{
+  "name": "advent_of_code_2017",
+  "version": "1.0.0",
+  "description": "Repository of Advent of Code 2017 solutions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.0.1"
+  },
+  "scripts": {
+    "test": "mocha test/* test/**/*.js",
+    "cover": "istanbul cover _mocha test/**/*.js",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuasir/advent_of_code_2017.git"
+  },
+  "author": "Manuel J. Bernal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manuasir/advent_of_code_2017/issues"
+  },
+  "homepage": "https://github.com/manuasir/advent_of_code_2017#readme"
+}
