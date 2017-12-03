@@ -9,7 +9,7 @@ const assert = require('assert')
 describe('Testing day 1', () => {
   it('first challenge', (done) => {
     assert(should)
-    assert( require('../day_1/index'))
+    assert(require('../day_1/index'))
     require('../day_1/index').resolveCaptcha('1122').should.be.equal(3)
     require('../day_1/index').resolveCaptcha('1111').should.be.equal(4)
     require('../day_1/index').resolveCaptcha('1234').should.be.equal(0)

@@ -36,10 +36,10 @@ exports.resolveCaptcha = (str) => {
  */
 exports.resolveCaptchaHalfwayAround = (str) => {
   let duplicates = []
-  const steps = str.length/2
+  const steps = str.length / 2
   for (let i = 0; i < str.length; i++) {
-    if (str[i] === str[i+steps]) {
-      duplicates.push(Number(str[i])+Number(str[i+steps]))
+    if (str[i] === str[i + steps]) {
+      duplicates.push(Number(str[i]) + Number(str[i + steps]))
     }
   }
   return duplicates.reduce((a, b) => { return a + b }, 0)
