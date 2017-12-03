@@ -3,4 +3,4 @@
 [![Coverage Status](https://coveralls.io/repos/github/manuasir/advent_of_code_2017/badge.svg?branch=master)](https://coveralls.io/github/manuasir/advent_of_code_2017?branch=master)
 
 # advent_of_code_2017
-Repository of (Advent of Code 2017)[http://adventofcode.com/] solutions
+Repository of [Advent of Code 2017](http://adventofcode.com/) solutions
