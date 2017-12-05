@@ -19,7 +19,6 @@ exports.isValidPassphrase = (passphrase) => {
 
 exports.howManyPassAreValid = (input) => {
   const passphrases = input.split('\n')
-  console.log(passphrases)
   let count = 0
   for (let passphrase of passphrases) {
     if(this.isValidPassphrase(passphrase))

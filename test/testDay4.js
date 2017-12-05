@@ -16,7 +16,7 @@ describe('Testing day 4', () => {
     require('../day_4/index').isValidPassphrase('aa bb cc dd aaa').should.be.equal(true)
     require('../day_4/index').isValidPassphrase('fyx fyx nzkm fyx').should.be.equal(false)
     require('../day_4/index').isValidPassphrase('fyx cc nzkm fyxs').should.be.equal(true)
-    require('../day_4/index').howManyPassAreValid(require('../day_4/input').input).should.be.equal(451)
+    require('../day_4/index').howManyPassAreValid(require('../day_4/input').input).should.be.equal(452)
     done()
   })
   it('second challenge', (done) => {
@@ -38,7 +38,7 @@ describe('Testing day 4', () => {
     require('../day_4/index').isValidCheckSum('mgn gox tcifta vzc lxry gox gox mvila qdl jipjnw dvu\n').should.be.equal(false)
     require('../day_4/index').isValidCheckSum('hxk xhk unhdmdz yomze povrt nbww bxu qqsqc rvuk tgffy twddm').should.be.equal(false)
     require('../day_4/index').isValidCheckSum('fyx fyx nzkm fyx').should.be.equal(false)
-    require('../day_4/index').howManyPassChecksumAreValid(require('../day_4/input').input).should.be.equal(204)
+    require('../day_4/index').howManyPassChecksumAreValid(require('../day_4/input').input).should.be.equal(205)
     'a'.charCodeAt(0).should.be.equal(97)
     'b'.charCodeAt(0).should.be.equal(98)
     'c'.charCodeAt(0).should.be.equal(99)

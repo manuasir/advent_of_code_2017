@@ -509,4 +509,4 @@ exports.input = 'vxjtwn vjnxtw sxibvv mmws wjvtxn icawnd rprh\n' +
   'mtgky xmwf zdko nnocxye gytkm ygp hixk xwmf\n' +
   'maudjy okgjga uadjmy dzfrk omd\n' +
   'azz ajdcqkd bcafn zaz dcjaqdk gylyzo\n' +
-  'xzvfbf fopmfxu mvftgr mfupoxf coyhof talcc vpkslo'
+  'xzvfbf fopmfxu mvftgr mfupoxf coyhof talcc vpkslo\n'
