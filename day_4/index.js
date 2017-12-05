@@ -19,6 +19,7 @@ exports.isValidPassphrase = (passphrase) => {
 
 exports.howManyPassAreValid = (input) => {
   const passphrases = input.split('\n')
+  console.log(passphrases)
   let count = 0
   for (let passphrase of passphrases) {
     if(this.isValidPassphrase(passphrase))
@@ -48,11 +49,10 @@ exports.isValidCheckSum = (passphrase) => {
     else
       temp.push(checkSum)
   }
-
   return isValid
 }
 
-exports.checkSum =  (input) => {
+exports.checkSum = (input) => {
   let sum = 0
   for(let i=0;i<input.length;i++){
     sum+=input[i].charCodeAt(0)
