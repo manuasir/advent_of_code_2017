@@ -28,33 +28,11 @@ exports.howManyPassAreValid = (input) => {
 }
 
 exports.howManyPassChecksumAreValid = (input) => {
-  const passphrases = input.split('\n')
-  let count = 0
-  for (let passphrase of passphrases) {
-    if(this.isValidCheckSum(passphrase))
-      count++
-  }
-  return count
+  const phrases = input.trim().split('\n')
+  const noRepeats = (w, _, ws) => ws.filter(v => v === w).length === 1
+  const sortLetters = w => [...w].sort().join('')
+  const isValid = f => ph => ph.split(' ').map(f).every(noRepeats)
+  const count = f => phrases.filter(isValid(f)).length
+  return [w => w, sortLetters].map(count)[1]
 }
 
-exports.isValidCheckSum = (passphrase) => {
-  let isValid = true
-  let allWords = passphrase.split(' ')
-  let temp = []
-  for (let word of allWords) {
-    let checkSum = this.checkSum(word)
-    if (temp.includes(checkSum))
-      isValid = false
-    else
-      temp.push(checkSum)
-  }
-  return isValid
-}
-
-exports.checkSum = (input) => {
-  let sum = 0
-  for(let i=0;i<input.length;i++){
-    sum+=input[i].charCodeAt(0)
-  }
-  return sum
-}
