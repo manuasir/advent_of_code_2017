@@ -10,7 +10,5 @@ exports.makeTree = (input) => {
       tree.push({value:currentValue})
     }
   }
-  const arr1 = tree.map((o)=> { return o.value})
-  const arr2 = tree.map((o) => { if (o.children) return o.children}).join().split(',')
-  return arr1.filter(x => arr2.indexOf(x) === -1).join()
+  return tree.map((o)=> { return o.value}).filter(x => tree.map((o) => { if (o.children) return o.children}).join().split(',').indexOf(x) === -1).join()
 }
