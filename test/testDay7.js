@@ -15,10 +15,5 @@ describe('Testing day 7', () => {
     require('../day_7/index').makeTree(require('../day_7/input').input).should.be.equal('aobgmc,rqwgj')
     done()
   })
-  it('second challenge', (done) => {
-
-    done()
-  })
-
 
 })
