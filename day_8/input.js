@@ -1,3 +1,4 @@
+
 exports.input = 'um inc -671 if lbf != 5\n' +
     'j inc 236 if umr > -6\n' +
     'fk inc -246 if j < 241\n' +
@@ -997,7 +998,7 @@ exports.input = 'um inc -671 if lbf != 5\n' +
     'aao inc 166 if kg >= 2720\n' +
     'x inc -146 if is == 4943\n' +
     'es inc 496 if kg < 2723\n' +
-    't dec -949 if uy <= -2989\n'
+    't dec -949 if uy <= -2989'
 
 exports.liteInput = 'b inc 5 if a > 1\n' +
     'a inc 1 if b < 5\n' +
