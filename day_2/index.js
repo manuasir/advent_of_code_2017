@@ -89,7 +89,7 @@ exports.getEvenlyDivisibleValues = (input) => {
     } else {
       num += String(input[i])
     }
-    // process each line here
+        // process each line here
     if (input[i] === '\n') {
       sum.push(checkDivisibleValues(file))
       file = []

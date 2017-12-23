@@ -17,7 +17,7 @@ exports.reduceWeight = (inp) => {
   const input = inp.trim().split('\n')
   const parse = s => s.match(/(\w+) \((\d+)\)(?: -> (.+))?/)
   const towerMap = input.map(parse).reduce((o, [, key, w, nodes]) =>
-    Object.assign(o, { [key]: { key, w: +w, nodes: nodes && nodes.split(', ') } }), {})
+        Object.assign(o, { [key]: { key, w: +w, nodes: nodes && nodes.split(', ') } }), {})
   const towers = Object.values(towerMap)
   const isNotAParentOf = ({ key }) => ({ nodes }) => !nodes || !nodes.includes(key)
   const head = towers.filter(t => towers.every(isNotAParentOf(t)))[0]
