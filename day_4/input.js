@@ -1,4 +1,4 @@
-//exports.liteInput = 'npcyld jkxldm\n'
+// exports.liteInput = 'npcyld jkxldm\n'
 
 exports.input = 'vxjtwn vjnxtw sxibvv mmws wjvtxn icawnd rprh\n' +
   'fhaa qwy vqbq gsswej lxr yzl wakcige mwjrl\n' +

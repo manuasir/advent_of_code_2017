@@ -21,5 +21,4 @@ describe('Testing day 5', () => {
     require('../day_5/index').instructionStepsV2(require('../day_5/input').input).should.be.equal(24315397)
     done()
   })
-
 })

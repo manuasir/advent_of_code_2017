@@ -17,11 +17,8 @@ describe('Testing day 6', () => {
     done()
   })
   it('first challenge', (done) => {
-
     require('../day_6/index').memoryDistribution(require('../day_6/input').liteInput)[1].should.be.equal(4)
     require('../day_6/index').memoryDistribution(require('../day_6/input').input)[1].should.be.equal(8038)
     done()
   })
-
-
 })

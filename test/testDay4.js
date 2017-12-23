@@ -25,5 +25,4 @@ describe('Testing day 4', () => {
     require('../day_4/index').howManyPassChecksumAreValid(require('../day_4/input').input).should.be.equal(223)
     done()
   })
-
 })

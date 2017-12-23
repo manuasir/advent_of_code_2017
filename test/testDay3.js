@@ -16,5 +16,4 @@ describe('Testing day 3', () => {
     require('../day_3/index').howManySteps(277678).should.be.equal(475)
     done()
   })
-
 })

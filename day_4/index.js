@@ -8,10 +8,7 @@ exports.isValidPassphrase = (passphrase) => {
   let allWords = passphrase.split(' ')
   let temp = []
   for (let word of allWords) {
-    if (temp.includes(word))
-      isValid = false
-    else
-      temp.push(word)
+    if (temp.includes(word)) { isValid = false } else { temp.push(word) }
   }
 
   return isValid
@@ -21,8 +18,7 @@ exports.howManyPassAreValid = (input) => {
   const passphrases = input.split('\n')
   let count = 0
   for (let passphrase of passphrases) {
-    if(this.isValidPassphrase(passphrase))
-      count++
+    if (this.isValidPassphrase(passphrase)) { count++ }
   }
   return count
 }
@@ -35,4 +31,3 @@ exports.howManyPassChecksumAreValid = (input) => {
   const count = f => phrases.filter(isValid(f)).length
   return [w => w, sortLetters].map(count)[1]
 }
-

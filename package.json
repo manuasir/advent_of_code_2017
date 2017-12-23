@@ -6,9 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
   "devDependencies": {
-    "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^4.0.1"
@@ -27,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/manuasir/advent_of_code_2017/issues"
   },
-  "homepage": "https://github.com/manuasir/advent_of_code_2017#readme"
+  "homepage": "https://github.com/manuasir/advent_of_code_2017#readme",
+  "dependencies": {
+    "chai": "^4.1.2"
+  }
 }
